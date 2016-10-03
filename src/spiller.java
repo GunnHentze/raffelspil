@@ -15,5 +15,4 @@ public class spiller {
         String player2 = sc.nextLine();
         return player1+" and "+player2;
     }
-//Taugyn
 }
