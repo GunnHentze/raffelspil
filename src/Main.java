@@ -23,7 +23,7 @@ public class Main {
 			} 
 			
 			else {
-				System.out.println("Error");
+				System.out.println("Error");//
 			}
 
 			System.out.println("Player 2 press 2 to roll");
