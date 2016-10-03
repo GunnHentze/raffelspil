@@ -14,7 +14,7 @@ public class Terning {
     int sum = t1 + t2;
     //Definere 2 spillere'
     void tjekker(int player1, int player2,int validate){
-        player1=1;
+        player1=1; //Github test
         player2=2;
         validate=0;
         if(validate==player1){
