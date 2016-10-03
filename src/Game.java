@@ -12,5 +12,20 @@ public class Game {
 		return (int) (Math.random() *6 + 1);
 	}
 
-  P1= roll() + roll();
+public int PointSum() {
+	
+	if(validate == spiller1){
+		P1 = P1 + roll() + roll();
+		return P1;
+	}
+	return 0;
+}
+public int PointSum1(){
+	
+	if(validate == spiller2){
+		P2 = P2 + roll() + roll();
+		return P2;
+	}
+	return 0;
+}
 }
