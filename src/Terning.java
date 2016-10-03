@@ -17,8 +17,8 @@ public class Terning {
         player1=1;
         player2=2;
         validate=0;
-        if(validate==player1){sadas
-            sum=t1+t2
+        if(validate==player1){
+            sum=t1+t2;
         }
         else if(validate==player2){
             int sum1=t1+t2;
