@@ -5,7 +5,6 @@ import java.util.Scanner;
  */
 public class spiller {
     //Her defineres pointene
-    int point;
 
     //String som indeholder spiller 1 og spiller 2
     public String toString(){
