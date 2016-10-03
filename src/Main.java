@@ -4,8 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		spiller sp = new spiller();
-		Terning t = new Terning();
-		Point p = new Point();
+		Game p = new Game();
 
 		System.out.println("Welcome: " + sp.toString());
 
@@ -18,8 +17,12 @@ public class Main {
 
 			if (a == 1) {
 				p.validate = 1;
-				System.out.println("Slag: " + t.t1 + ", " + t.t2);
-			} else {
+				System.out.println("Slag: " + p.roll() + ", " + p.roll());
+				System.out.println("Player 1 total is: "+ p.PointSum());
+				
+			} 
+			
+			else {
 				System.out.println("Error");
 			}
 
@@ -28,8 +31,11 @@ public class Main {
 
 			if (b == 2) {
 				p.validate = 2;
-				System.out.println("Slag: " + t.t3 + ", " + t.t4);
-			} else {
+				System.out.println("Slag: " + p.roll() + ", " + p.roll());
+				System.out.println("Player 2 total is: " + p.PointSum1() );
+			} 
+			
+			else {
 				System.out.println("Error");
 			}
 
