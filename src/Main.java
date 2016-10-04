@@ -14,7 +14,7 @@ public class Main {
 			System.out.println("Player press 1 to roll");
 
 			int a = sc.nextInt();
-//
+
 			if (a == 1) {
 				p.validate = 1;
 				System.out.println("Slag: " + p.roll() + ", " + p.roll());
