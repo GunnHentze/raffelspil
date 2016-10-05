@@ -33,6 +33,7 @@ public class Main {
 				p.validate = 2;
 				System.out.println("Slag: " + p.roll() + ", " + p.roll());
 				System.out.println("Player 2 total is: " + p.PointSum1() );
+				System.out.println(p.P2);
 			} 
 			
 			else {

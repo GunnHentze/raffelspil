@@ -1,4 +1,4 @@
-
+import java.util.Random;
 public class Game {
 	
 	int spiller1 = 1;
@@ -9,14 +9,14 @@ public class Game {
 	
 	
 	public int roll() {
-		return (int) (Math.random() *6 + 1);
+		return (int) (Math.random()*6 + 1);
 	}
 	
 
 public int PointSum() {
 	
 	if(validate == spiller1){
-		P1 = P1 + roll() + roll();
+		P1 = roll() + roll() + P1;
 		return P1;
 	}
 	return 0;
@@ -24,7 +24,7 @@ public int PointSum() {
 public int PointSum1(){
 	
 	if(validate == spiller2){
-		P2 = P2 + roll() + roll();
+		P2 = roll() + roll() + P2;
 		return P2;
 	}
 	return 0;
