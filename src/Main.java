@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		spiller sp = new spiller();
+
 		Game p = new Game();
 
-		System.out.println("Welcome: " + sp.toString());
+		//System.out.println("Welcome: " + sp.toString());
 
 		Scanner sc = new Scanner(System.in);
 

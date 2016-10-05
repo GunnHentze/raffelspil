@@ -21,63 +21,73 @@ public class terning {
 		int player1 = 0;
 		int player2 = 0;
 
-		System.out.println("Velkomme til raflle splillet");
+		System.out.println("Velkommen til Terning Splillet");
 
 		Scanner input = new Scanner(System.in);
+		
+		Roll r = new Roll();
 
 		while (true) {
+			
+			int x = r.terning1();
+			
+			int y = r.terning2();
 
-			System.out.println("Player 1 Tryk 1 for at kaste");
+			System.out.println("Player 1, Tryk 1 for at kaste");
 
 			if (input.nextInt() == 1) {
 
 				Random rand = new Random();
-				int terning1 = rand.nextInt(6) + 1;
-				int terning2 = rand.nextInt(6) + 1;
-				System.out.println("Du slog " + terning1 + " og " + terning2);
 
-				player1 = player1 + terning2 + terning1;
+				System.out.println("Du slog " + x + " og " + y);
 
-				if (terning1 == 1 && terning2 == 1) {
+				player1 = player1 + y + x;
+				
+				if (input.nextInt() == 28){
+					player1 = player1 + y + x + x + y;
+				}
+
+				if (x == 1 && y == 1) {
 					player1 = 0;
 					System.out.println("Du slog to 1'ere. Du mister dine point!");
 				}
 
-				if (terning1 == terning2 && terning1 > 1) {
+				if (x == y && x > 1) {
 
 					// Når man rammer 40 point skal man slå to af de samme tal
 					if (player1 >= 40) {
 
-						if (terning1 == terning2) {
+						if (x == y) {
 							System.out.println("Du vandt");
+							break;
 						}
 					}
 
-					if (terning1 == 6 && terning2 == 6) {
+					if (x == 6 && y == 6) {
 						System.out.println("Du slog 2 6'ere, hvis du slår 6'ere igen");
 
 					}
 
 					System.out.println("Du får en ekstra tur!");
-					terning1 = rand.nextInt(6) + 1;
-					terning2 = rand.nextInt(6) + 1;
-					System.out.println("Du slog i din ekstra tur " + terning1 + " og " + terning2);
-					player1 = player1 + terning2 + terning1;
+					x = rand.nextInt(6) + 1;
+					y = rand.nextInt(6) + 1;
+					System.out.println("Du slog i din ekstra tur " + x + " og " + y);
+					player1 = player1 + y + x;
 
-					if (terning1 == terning2) {
+					if (x == y) {
 
 						System.out.println("Du får en ekstra tur!");
-						terning1 = rand.nextInt(6) + 1;
-						terning2 = rand.nextInt(6) + 1;
-						System.out.println("Du slog i din ekstra tur " + terning1 + " og " + terning2);
-						player1 = player1 + terning2 + terning1;
+						x = rand.nextInt(6) + 1;
+						y = rand.nextInt(6) + 1;
+						System.out.println("Du slog i din ekstra tur " + x + " og " + y);
+						player1 = player1 + y + x;
 
-						if (terning1 == terning2) {
+						if (x == y) {
 							System.out.println("Du får en ekstra tur!");
-							terning1 = rand.nextInt(6) + 1;
-							terning2 = rand.nextInt(6) + 1;
-							System.out.println("Du slog i din ekstra tur " + terning1 + " og " + terning2);
-							player1 = player1 + terning2 + terning1;
+							x = rand.nextInt(6) + 1;
+							y = rand.nextInt(6) + 1;
+							System.out.println("Du slog i din ekstra tur " + x + " og " + y);
+							player1 = player1 + y + x;
 
 						}
 
@@ -90,68 +100,67 @@ public class terning {
 				// Når man rammer 40 point skal man slå to af de samme tal
 				if (player1 >= 40) {
 
-					if (terning1 == terning2) {
+					if (x == y) {
 						System.out.println("Du vandt");
 						break;
 					}
 				}
 			}
-
-			int x = player1;
+			
+            int x1 = r.terning1();
+			
+			int y1 = r.terning2();
 
 			System.out.println("Player 2 tryk 2 for at kaste");
 			if (input.nextInt() == 2) {
 
 				Random rand = new Random();
 
-				int terning1 = rand.nextInt(6) + 1;
-				int terning2 = rand.nextInt(6) + 1;
+				System.out.println("Du slog " + x1 + " og " + y);
 
-				System.out.println("Du slog " + terning1 + " og " + terning2);
-
-				player2 = player2 + terning1 + terning2;
+				player2 = player2 + x1 + y;
 
 				// To 1'ere mister alle point.
-				if (terning1 == 1 && terning2 == 1) {
+				if (x1 == 1 && y == 1) {
 					player2 = 0;
 					System.out.println("Du slog to 1'ere. Du mister dine point!");
 				}
 
-				if (terning1 == terning2 && terning1 > 1) {
+				if (x1 == y && x1 > 1) {
 
 					// Når man rammer 40 point skal man slå to af de samme tal
 					if (player2 >= 40) {
 
-						if (terning1 == terning2) {
+						if (x1 == y) {
 							System.out.println("Du vandt");
 							break;
 						}
 					}
-					if (terning1 == 6 && terning2 == 6) {
+					if (x1 == 6 && y == 6) {
 						System.out.println("Du slog 2 6'ere, hvis du slår 6'ere igen");
 
 					}
 
 					System.out.println("Du får en ekstra tur!");
-					terning1 = rand.nextInt(6) + 1;
-					terning2 = rand.nextInt(6) + 1;
-					System.out.println("Du slog i din ekstra tur " + terning1 + " og " + terning2);
-					player2 = player2 + terning2 + terning1;
+					x1 = rand.nextInt(6) + 1;
+					y = rand.nextInt(6) + 1;
+					System.out.println("Du slog i din ekstra tur " + x1 + " og " + y);
+					player2 = player2 + y + x1;
 
-					if (terning1 == terning2) {
+					if (x1 == y) {
 
 						System.out.println("Du får en ekstra tur!");
-						terning1 = rand.nextInt(6) + 1;
-						terning2 = rand.nextInt(6) + 1;
-						System.out.println("Du slog i din ekstra tur " + terning1 + " og " + terning2);
-						player2 = player2 + terning2 + terning1;
+						x1 = rand.nextInt(6) + 1;
+						y = rand.nextInt(6) + 1;
+						System.out.println("Du slog i din ekstra tur " + x1 + " og " + y);
+						player2 = player2 + y + x1;
 
-						if (terning1 == terning2) {
+						if (x1 == y) {
 							System.out.println("Du får en ekstra tur!");
-							terning1 = rand.nextInt(6) + 1;
-							terning2 = rand.nextInt(6) + 1;
-							System.out.println("Du slog i din ekstra tur " + terning1 + " og " + terning2);
-							player2 = player2 + terning2 + terning1;
+							x1 = rand.nextInt(6) + 1;
+							y = rand.nextInt(6) + 1;
+							System.out.println("Du slog i din ekstra tur " + x1 + " og " + y);
+							player2 = player2 + y + x1;
 
 						}
 
@@ -164,7 +173,7 @@ public class terning {
 				// Når man rammer 40 point skal man slå to af de samme tal
 				if (player2 >= 40) {
 
-					if (terning1 == terning2) {
+					if (x1 == y) {
 						System.out.println("Du vandt");
 						break;
 					}
