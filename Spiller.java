@@ -11,5 +11,3 @@ public class Spiller {
         return spiller1+" and "+spiller2;
     }
 }
-
-//hej
