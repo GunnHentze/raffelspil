@@ -31,11 +31,11 @@ public class Main {
 			int y = r.terning2();
 
 			System.out.println("Player 1, Tryk 1 for at kaste");
-
+			//If statement som be- eller afkræfter om det indtastede tal er 1, hvis ja så gælder det nedestående
 			if (input.nextInt() == 1) {
-
+				//Random util. hentes
 				Random rand = new Random();
-
+				//Her printes x og y værdier, som er hentet fra et pre-def klasse
 				System.out.println("Du slog " + x + " og " + y);
 
 				player1 = player1 + y + x;
