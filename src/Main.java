@@ -1,15 +1,10 @@
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 import java.util.Random;
 import java.util.Scanner;
 
 /**
  *
- * @author Injam DCF
+ * @author Gruppe:.19.
  */
 public class Main {
 
@@ -17,20 +12,22 @@ public class Main {
 	 * @param args
 	 *            the command line arguments
 	 */
+	//Main klasse
 	public static void main(String[] args) {
+		//Definere spillerne
 		int player1 = 0;
 		int player2 = 0;
 
-		System.out.println("Velkommen til Terning Splillet");
+		System.out.println("Velkommen til Terning Splillet"); //Velkomst besked via syso.
 
+		//Kalder scanneren ind
 		Scanner input = new Scanner(System.in);
-		
+		//Kalder Roll klassen
 		Roll r = new Roll();
 
 		while (true) {
-			
+			//Roll klassen kalder, herunder metoderne terning1 og terning 2
 			int x = r.terning1();
-			
 			int y = r.terning2();
 
 			System.out.println("Player 1, Tryk 1 for at kaste");
