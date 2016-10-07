@@ -1,3 +1,4 @@
+package spil;
 import java.util.Scanner;
 
 public class Spiller {
@@ -11,4 +12,20 @@ public class Spiller {
 		return spiller1 +" and "+ spiller2;
 		
     }
+    
+    public int playerTotal1(){
+    	
+    	int player1 = 0;
+    	
+    	
+    	return player1;
+    }
+    
+    public int playerTotal2(){
+    	
+    	int player2 = 0;
+    	
+    	return player2;
+    }
+    
 }

@@ -1,3 +1,4 @@
+package spil;
 
 public class Roll {
 	
@@ -16,6 +17,15 @@ public class Roll {
 		
 		return terning2;
 	}
+	
+	
+	public int ekstraRoll(int player){
 
-
+		
+		System.out.println("Du får en ekstra tur!");
+		System.out.println("Du slog i din ekstra tur " + this.terning1() + " og " + this.terning2());
+		
+		player = player + this.terning1() + this.terning2();
+		return player;
+	}
 }
