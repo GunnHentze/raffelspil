@@ -29,12 +29,15 @@ public class Main {
 			//Roll klassen kalder, herunder metoderne terning1 og terning 2
 			int x = r.terning1();
 			int y = r.terning2();
+			
 
 			System.out.println("Player 1, Tryk 1 for at kaste");
 			//If statement som be- eller afkræfter om det indtastede tal er 1, hvis ja så gælder det nedestående
 			if (input.nextInt() == 1) {
+				
 				//Random util. hentes
 				Random rand = new Random();
+				
 				//Her printes x og y værdier, som er hentet fra et pre-def klasse
 				System.out.println("Du slog " + x + " og " + y);
 
@@ -47,7 +50,7 @@ public class Main {
 
 				if (x == y && x > 1) {
 
-					// Når man rammer 40 point skal man slå to af de samme tal
+					// Når man rammer 40 point skal man slå to af de samme tal for vinde
 					if (player1 >= 40) {
 
 						if (x == y) {
@@ -55,7 +58,7 @@ public class Main {
 							break;
 						}
 					}
-
+					//Sær tilfælde - if statement
 					if (x == 6 && y == 6) {
 						System.out.println("Du slog 2 6'ere, hvis du slår 6'ere igen");
 
@@ -98,13 +101,14 @@ public class Main {
 						break;
 					}
 				}
+			 
 			}
 			
             int x1 = r.terning1();
 			
 			int y1 = r.terning2();
 
-			System.out.println("Player 2 tryk 2 for at kaste");
+			System.out.println("Player 2, tryk 2 for at kaste.");
 			if (input.nextInt() == 2) {
 
 				Random rand = new Random();
