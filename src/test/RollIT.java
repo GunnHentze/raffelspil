@@ -36,18 +36,4 @@ public class RollIT {
         }
     }
 
-    /**
-     * Test of ekstraRoll method, of class Roll.
-     */
-    @Test
-    public void testEkstraRoll() {
-        System.out.println("ekstraRoll");
-        int player = 1;
-        Roll instance = new Roll();
-        int result = instance.ekstraRoll(player);
-        if (result < 1) {
-            fail("terning er er ikke begrænset ");
-        }
-    }
-
 }

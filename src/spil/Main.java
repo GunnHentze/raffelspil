@@ -1,6 +1,6 @@
 package spil;
 
-import java.util.Random;
+
 import java.util.Scanner;
 
 /**
@@ -28,7 +28,7 @@ public class Main {
 		Roll r = new Roll();
 
 		while (true) {
-			// Roll klassen kalder, herunder metoderne terning1 og terning 2
+			// Roll klassen kalde, herunder metoderne terning1 og terning 2
 			int x, y;
 			do {
 				x = r.terning1();
@@ -138,6 +138,7 @@ public class Main {
 					break;
 				}
 			}
+			
 		}
 	}
 }
