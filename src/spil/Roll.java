@@ -9,7 +9,6 @@ public class Roll {
 		
 		int terning1 = (int) (Math.random()*6 + 1);
 		
-		
 		return terning1;
 	}
 	
