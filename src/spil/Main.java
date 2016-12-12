@@ -16,7 +16,7 @@ public class Main {
 	// Main klasse
 	public static void main(String[] args) {
 		// Definere spillerne
-		int player1 = 0;
+		int player1 = 1;
 		int player2 = 0;
 
 		System.out.println("Velkommen til Terning Splillet"); // Velkomst besked
