@@ -21,7 +21,7 @@ public class Main {
 
 		System.out.println("Velkommen til Terning Splillet"); // Velkomst besked
 																// via syso.
-
+ 
 		// Kalder scanneren ind
 		Scanner input = new Scanner(System.in);
 		// Kalder Roll klassen
