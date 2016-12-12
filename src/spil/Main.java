@@ -132,11 +132,6 @@ public class Main {
 
 			// Når man rammer 40 point skal man slå to af de samme tal
 			if (player2 >= 40) {
-
-				if (x1 == y1) {
-					//System.out.println("D");
-					break;
-				}
 			}
 			
 		}

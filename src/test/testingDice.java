@@ -21,7 +21,7 @@ public class testingDice {
         int tal5=0;
         int tal6=0;        
         Roll instance = new Roll();
-        for(int i=0;i<=100000;i++){
+        for(int i=0;i<=1000;i++){
                 int result = instance.terning1();
           if(result==1){
               tal1++;
